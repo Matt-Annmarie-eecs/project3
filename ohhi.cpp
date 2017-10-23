@@ -6,7 +6,9 @@
  * Fall 2017
  *
  * <#Name(s)#>
+ * Matthew Waldeck, Ann-Marie Zheng
  * <#uniqname(s)#>
+ * mwaldeck, annzheng
  *
  * <#A description of the project here#>
  */
