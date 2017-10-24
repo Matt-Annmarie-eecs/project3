@@ -14,7 +14,8 @@
 #include <iostream>
 #include "utility.h"
 #include "ohhi.h"
-
+#include <string>
+using namespace std;
 void test_count_unknown_squares();
 
 void test_row_has_no_threes_of_color();
@@ -54,6 +55,7 @@ void test_count_unknown_squares() {
 }
 
 void test_row_has_no_threes_of_color(){
+    cout << "Testing row_has_no_threes_of_color";
     int board[MAX_SIZE][MAX_SIZE];
     
     string test_board_1[] = {"OOOX",
@@ -62,12 +64,13 @@ void test_row_has_no_threes_of_color(){
                             "XXOX"};
     int size_1 = 4;
     read_board_from_string(board, test_board_1, size_1);
-    cout << row_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
+    cout << "Expected: 0" << row_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
     
         
 }
 
 void test_col_has_no_threes_of_color(){
+    cout << "Testing col_has_no_threes_of_color";
     int board[MAX_SIZE][MAX_SIZE];
     
     string test_board_1[] = {"OOOX",
@@ -76,7 +79,7 @@ void test_col_has_no_threes_of_color(){
                             "XXOX"};
     int size_1 = 4;
     read_board_from_string(board, test_board_1, size_1);
-    cout << col_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
+    cout << "Expected: 0" << col_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
     
     
 }
