@@ -14,8 +14,7 @@
 #include <iostream>
 #include "utility.h"
 #include "ohhi.h"
-#include <string>
-using namespace std;
+
 
 void test_count_unknown_squares();
 
@@ -28,8 +27,7 @@ void test_board_has_no_threes();
 // declare more test functions here
 
 int main() {
-    
-    test_board_has_no_threes();
+        test_board_has_no_threes();
 
     // add calls to test functions here
 
