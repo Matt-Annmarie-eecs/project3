@@ -16,22 +16,20 @@
 #include "ohhi.h"
 #include <string>
 using namespace std;
+
 void test_count_unknown_squares();
 
 void test_row_has_no_threes_of_color();
 
 void test_col_has_no_threes_of_color();
 
+void test_board_has_no_threes();
 
 // declare more test functions here
 
 int main() {
-    test_count_unknown_squares();
     
-    test_row_has_no_threes_of_color();
-    
-    test_col_has_no_threes_of_color()
-
+    test_board_has_no_threes();
 
     // add calls to test functions here
 
@@ -55,7 +53,6 @@ void test_count_unknown_squares() {
 }
 
 void test_row_has_no_threes_of_color(){
-    cout << "Testing row_has_no_threes_of_color";
     int board[MAX_SIZE][MAX_SIZE];
     
     string test_board_1[] = {"OOOX",
@@ -64,13 +61,12 @@ void test_row_has_no_threes_of_color(){
                             "XXOX"};
     int size_1 = 4;
     read_board_from_string(board, test_board_1, size_1);
-    cout << "Expected: 0" << row_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
+    cout << row_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
     
         
 }
 
 void test_col_has_no_threes_of_color(){
-    cout << "Testing col_has_no_threes_of_color";
     int board[MAX_SIZE][MAX_SIZE];
     
     string test_board_1[] = {"OOOX",
@@ -79,8 +75,19 @@ void test_col_has_no_threes_of_color(){
                             "XXOX"};
     int size_1 = 4;
     read_board_from_string(board, test_board_1, size_1);
-    cout << "Expected: 0" << col_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
+    cout << col_has_no_threes_of_color(board, size_1, 0, BLUE) << endl;
     
     
 }
 
+void test_board_has_no_threes(){
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board_1[] = {"OOOX",
+                            "OXXO",
+                            "O-XX",
+                            "XXOX"};
+    int size_1 = 4;
+    read_board_from_string(board, test_board_1, size_1);
+    cout << board_has_no_threes(board, size_1) << endl;
+}
