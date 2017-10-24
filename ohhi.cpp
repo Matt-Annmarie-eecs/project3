@@ -75,7 +75,7 @@ bool board_has_no_threes(const int board[MAX_SIZE][MAX_SIZE], int size) {
         if (!row_has_no_threes_of_color(board, size, i, RED) || !row_has_no_threes_of_color(board, size, i, BLUE)){
             return false;
         }
-        if (!col_has_no_threes(board, size, i, RED) || !col_has_no_threes(board, size, i, BLUE)){
+        if (!col_has_no_threes_of_color(board, size, i, RED) || !col_has_no_threes_of_color(board, size, i, BLUE)){
             return false;
         }
     }
