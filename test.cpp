@@ -26,6 +26,8 @@ void test_board_has_no_threes();
 
 void test_solve_balance_row();
 
+void test_solve_balance_column();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -210,6 +212,7 @@ void test_solve_balance_row(){
     read_board_from_string(board, test_board_1, size_1);
     solve_balance_row(board, size_1, 0, true);
     print_board(board, size_1);
+    cout << endl;
 
     string test_board_2[] = {"--OO",
                              "-XX-",
@@ -219,6 +222,7 @@ void test_solve_balance_row(){
     read_board_from_string(board, test_board_2, size_2);
     solve_balance_row(board, size_2, 1, true);
     print_board(board, size_2);
+    cout << endl;
     
     string test_board_3[] = {"--OO",
                              "-XX-",
@@ -228,8 +232,62 @@ void test_solve_balance_row(){
     read_board_from_string(board, test_board_3, size_3);
     solve_balance_row(board, size_3, 2, true);
     print_board(board, size_3);
-
+    cout << endl;
     
+    string test_board_4[] = {"--OO",
+                             "-XX-",
+                             "X-XX",
+                             "X-OX"};
+    int size_4 = 4;
+    read_board_from_string(board, test_board_4, size_4);
+    solve_balance_row(board, size_4, 3, true);
+    print_board(board, size_4);
+    cout << endl;
+}
+
+void test_solve_balance_column(){
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board_1[] = {"--OO",
+                             "-XX-",
+                             "O-XX",
+                             "OXOX"};
+    int size_1 = 4;
+    read_board_from_string(board, test_board_1, size_1);
+    solve_balance_column(board, size_1, 0, true);
+    print_board(board, size_1);
+     cout << endl;
+
+    string test_board_2[] = {"--OO",
+                             "-XX-",
+                             "O-XX",
+                             "OXOX"};
+    int size_2 = 4;
+    read_board_from_string(board, test_board_2, size_2);
+    solve_balance_column(board, size_2, 1, true);
+    print_board(board, size_2);
+    cout << endl;
+    
+    string test_board_3[] = {"--OO",
+                             "-XX-",
+                             "O-XX",
+                             "OXOX"};
+    int size_3 = 4;
+    read_board_from_string(board, test_board_3, size_3);
+    solve_balance_column(board, size_3, 3, true);
+    print_board(board, size_3);
+    cout << endl;
+    
+    string test_board_4[] = {"--XO",
+                             "-XX-",
+                             "O-XX",
+                             "OX-X"};
+    int size_4 = 4;
+    read_board_from_string(board, test_board_4, size_4);
+    solve_balance_column(board, size_4, 2, true);
+    print_board(board, size_4);
+    cout << endl;
+
     
 }
 
