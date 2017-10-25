@@ -24,11 +24,18 @@ void test_col_has_no_threes_of_color();
 
 void test_board_has_no_threes();
 
+/*requires: nothing
+ *modifies: cout
+ *effects: prints various test cases to the console for function
+ *board_has_no_duplicates
+ */
+void test_duplicates();
+
 // declare more test functions here
 
 int main() {
     test_row_has_no_threes_of_color();
-    
+    test_duplicates();
     // add calls to test functions here
 
     return 0;
@@ -154,4 +161,29 @@ void test_board_has_no_threes(){
 
 
     
+}
+
+void test_duplicates(){
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board_1[] = {"OOOX",
+        "OXXO",
+        "O-XX",
+        "XXOX"};
+    int size_1 = 4;
+    read_board_from_string(board, test_board_1, size_1);
+    cout << board_has_no_duplicates(board, 4) << " : should be true" << endl;
+    
+    int board2[MAX_SIZE][MAX_SIZE];
+    
+    string test_board_2[] = {"OXXO",
+        "OXXO",
+        "O-XX",
+        "XXOX"};
+    int size_2 = 4;
+    read_board_from_string(board2, test_board_2, size_2);
+    cout << board_has_no_duplicates(board2, 4) << " : should be false" << endl;
+    
+    
+    cout << endl;
 }
