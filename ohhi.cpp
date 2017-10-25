@@ -87,6 +87,10 @@ bool rows_are_different(const int board[MAX_SIZE][MAX_SIZE],
                         int size,
                         int row1,
                         int row2) {
+    
+    if(row1 == row2){
+        return false;
+    }
     for(int col = 0; col < size; col++){
         if(board[row1][col] != board[row2][col]){
             return true;
@@ -100,7 +104,9 @@ bool cols_are_different(const int board[MAX_SIZE][MAX_SIZE],
                         int size,
                         int col1,
                         int col2) {
-    
+    if(col1 == col2){
+        return false;
+    }
     for(int row = 0; row < size; row++){
         if(board[row][col1] != board[row][col2]){
             return true;

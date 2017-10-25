@@ -51,7 +51,7 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    
+    test_rows_are_different();
     // add calls to test functions here
 
     return 0;
@@ -369,13 +369,15 @@ void test_rows_are_different(){
     
     int board[MAX_SIZE][MAX_SIZE];
     
-    string test_board[] = {"O-X-",
-                           "-XXO-",
-                           "--X-",
-                           "--XO"};
-    int size = 4;
+    string test_board[] = {"XO---X",
+                           "-----O",
+                           "------",
+                           "------",
+                            "------",
+                            "-----X"};
+    int size = 6;
     read_board_from_string(board, test_board, size);
-    cout << rows_are_different(board, size, 0, 0) << endl;
+    cout << rows_are_different(board, size, 2, 3) << endl;
     
     cout << endl;
     
