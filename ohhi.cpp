@@ -17,6 +17,7 @@
 #include <cctype>
 #include "utility.h"
 #include "ohhi.h"
+#include "driver.h"
 
 ///////////////////////////////////////
 // UTILITY FUNCTIONS //////////////////
@@ -359,7 +360,8 @@ bool board_is_solved(const int board[MAX_SIZE][MAX_SIZE], int size) {
         }
     }
     if (noUnknown == true){
-        if (board_has_no_duplicates(board, size) && board_has_no_threes(board, size)){
+        if (board_has_no_duplicates(board, size) &&
+            board_has_no_threes(board, size) && board_is_balanced(board, size)){
             return true;
         }
     }
