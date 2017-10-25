@@ -24,11 +24,9 @@ void test_col_has_no_threes_of_color();
 
 void test_board_has_no_threes();
 
-<<<<<<< HEAD
 void test_solve_three_row();
-=======
+
 void test_solve_balance_row();
->>>>>>> 43aebc2fa5b7e288dde6c80b1d7b9337f4daa3f7
 
 void test_solve_balance_column();
 
@@ -205,7 +203,6 @@ void test_duplicates(){
     cout << endl;
 }
 
-<<<<<<< HEAD
 void test_solve_three_row(){
     
     int board[MAX_SIZE][MAX_SIZE];
@@ -228,7 +225,6 @@ void test_solve_three_row(){
     
 }
 
-=======
 void test_solve_balance_row(){
     int board[MAX_SIZE][MAX_SIZE];
     
@@ -329,10 +325,3 @@ void test_solve_balance_column(){
 
 
 
-
-
-
-
-
-
->>>>>>> 43aebc2fa5b7e288dde6c80b1d7b9337f4daa3f7
