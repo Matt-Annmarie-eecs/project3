@@ -160,7 +160,31 @@ void solve_balance_row(int board[MAX_SIZE][MAX_SIZE],
                        int size,
                        int row,
                        bool announce) {
-    // your code here
+    int numRed = 0;
+    int numBlue = 0;
+    for (int i = 0; i < size; i++){
+        if (board[row][i] == RED){
+            numRed++;
+        }
+        if (board[row][i] == BLUE){
+            numBlue++;
+        }
+    }
+    
+    if (numRed == (size / 2)){
+        for (int i = 0; i < size; i++){
+            if (board[row][i] == UNKNOWN){
+                mark_square_as(board, size, row, i, BLUE, announce);
+            }
+        }
+    }
+    if (numBlue == (size / 2)){
+        for (int i = 0; i < size; i++){
+            if (board[row][i] == UNKNOWN){
+                mark_square_as(board, size, row, i, RED, announce);
+            }
+        }
+    }
 }
 
 void solve_balance_column(int board[MAX_SIZE][MAX_SIZE],
