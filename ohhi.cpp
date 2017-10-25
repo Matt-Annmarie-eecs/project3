@@ -101,7 +101,7 @@ bool cols_are_different(const int board[MAX_SIZE][MAX_SIZE],
                         int size,
                         int col1,
                         int col2) {
-    // your code here
+    
     for(int row = 0; row < size; row++){
         if(board[row][col1] != board[row][col2]){
             return true;

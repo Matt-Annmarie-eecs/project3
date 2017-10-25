@@ -39,6 +39,8 @@ void test_solve_balance_column();
 
 void test_solve_three_col();
 
+void test_rows_are_different();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -360,6 +362,22 @@ void test_solve_three_col(){
     cout << endl;
     
     
+    
+}
+
+void test_rows_are_different(){
+    
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board[] = {"O-X-",
+                           "-XXO-",
+                           "--X-",
+                           "--XO"};
+    int size = 4;
+    read_board_from_string(board, test_board, size);
+    cout << rows_are_different(board, size, 0, 0) << endl;
+    
+    cout << endl;
     
 }
 
