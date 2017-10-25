@@ -59,6 +59,7 @@ void test_count_unknown_squares() {
 
 void test_row_has_no_threes_of_color(){
     int board[MAX_SIZE][MAX_SIZE];
+    cout << "Testing row_has_no_threes_of_color()";
     
     string test_board_1[] = {"OOOX",
                              "XXXO",
