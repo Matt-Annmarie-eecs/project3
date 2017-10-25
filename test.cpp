@@ -8,6 +8,9 @@
  * Matthew Waldeck
  * mwaldeck
  *
+ * Ann-Marie Zheng
+ * annzheng
+ *
  * code for project 3 of eecs183 which is a game of ohh1
  */
 
