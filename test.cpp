@@ -28,6 +28,10 @@ void test_solve_three_row();
 
 void test_solve_balance_row();
 
+void test_solve_three_row();
+
+void test_solve_balance_row();
+
 void test_solve_balance_column();
 
 /*requires: nothing
@@ -40,7 +44,7 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    test_solve_balance_row();
+    test_solve_three_row();
     // add calls to test functions here
 
     return 0;
@@ -203,6 +207,10 @@ void test_duplicates(){
     cout << endl;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 11f9eca17bab2cccc796a368858c40c18d23e146
 void test_solve_three_row(){
     
     int board[MAX_SIZE][MAX_SIZE];
@@ -223,8 +231,28 @@ void test_solve_three_row(){
     
     cout << endl;
     
+    string test_board1[] = {"OOOX",
+        "OXXO",
+        "X-OX",
+        "OXX-"};
+    size = 4;
+    read_board_from_string(board, test_board1, size);
+    cout << "initial board:" << endl;
+    print_board(board, size);
+    solve_three_in_a_row(board, size , 3, true);
+    cout << endl;
+    print_board(board, size);
+    
+    
+    
+    cout << endl;
+    
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 11f9eca17bab2cccc796a368858c40c18d23e146
 void test_solve_balance_row(){
     int board[MAX_SIZE][MAX_SIZE];
     
@@ -325,3 +353,13 @@ void test_solve_balance_column(){
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 11f9eca17bab2cccc796a368858c40c18d23e146
