@@ -32,6 +32,8 @@ void test_solve_balance_row();
 
 void test_solve_balance_column();
 
+void test_solve_three_col();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -42,7 +44,7 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    test_solve_three_row();
+    
     // add calls to test functions here
 
     return 0;
@@ -332,6 +334,29 @@ void test_solve_balance_column(){
     print_board(board, size_4);
     cout << endl;
 
+    
+}
+
+
+void test_solve_three_col(){
+    
+    
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board[] = {"---O",
+        "-XX-",
+        "O-XX",
+        "OX-X"};
+    int size = 4;
+    read_board_from_string(board, test_board, size);
+    print_board(board, size);
+    solve_three_in_a_column(board, size, 2, true);
+    print_board(board, size);
+    
+    
+    cout << endl;
+    
+    
     
 }
 
