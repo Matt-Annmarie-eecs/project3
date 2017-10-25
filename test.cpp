@@ -186,5 +186,14 @@ void test_duplicates(){
     cout << board_has_no_duplicates(board2, 4) << " : should be false" << endl;
     
     
+    int board3[MAX_SIZE][MAX_SIZE];
+    string test_board_3[] = {"OOXO",
+                             "OXOO",
+                             "X-XX",
+                             "XXOX"};
+    int size_3 = 4;
+    read_board_from_string(board3, test_board_3, size_3);
+    cout << board_has_no_duplicates(board3, 4) << " : should be false" << endl;
+    
     cout << endl;
 }
