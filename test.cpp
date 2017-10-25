@@ -24,11 +24,11 @@ void test_col_has_no_threes_of_color();
 
 void test_board_has_no_threes();
 
-<<<<<<< HEAD
+
 void test_solve_three_row();
-=======
+
 void test_solve_balance_row();
->>>>>>> 43aebc2fa5b7e288dde6c80b1d7b9337f4daa3f7
+
 
 /*requires: nothing
  *modifies: cout
@@ -40,7 +40,7 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    test_solve_balance_row();
+    test_solve_three_row();
     // add calls to test functions here
 
     return 0;
@@ -203,7 +203,7 @@ void test_duplicates(){
     cout << endl;
 }
 
-<<<<<<< HEAD
+
 void test_solve_three_row(){
     
     int board[MAX_SIZE][MAX_SIZE];
@@ -224,9 +224,25 @@ void test_solve_three_row(){
     
     cout << endl;
     
+    string test_board1[] = {"OOOX",
+        "OXXO",
+        "X-OX",
+        "OXX-"};
+    size = 4;
+    read_board_from_string(board, test_board1, size);
+    cout << "initial board:" << endl;
+    print_board(board, size);
+    solve_three_in_a_row(board, size , 3, true);
+    cout << endl;
+    print_board(board, size);
+    
+    
+    
+    cout << endl;
+    
 }
 
-=======
+
 void test_solve_balance_row(){
     int board[MAX_SIZE][MAX_SIZE];
     
@@ -277,4 +293,4 @@ void test_solve_balance_row(){
 
 
 
->>>>>>> 43aebc2fa5b7e288dde6c80b1d7b9337f4daa3f7
+
