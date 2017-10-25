@@ -123,6 +123,15 @@ bool board_has_no_duplicates(const int board[MAX_SIZE][MAX_SIZE], int size) {
         }
     }
     
+    for(int col1 = 0; col1 < size; col1++){
+        for(int col2 = col1 + 1; col2 < size; col2++){
+            if(!cols_are_different(board, size, col1, col2)){
+                return false;
+                
+            }
+        }
+    }
+    
     
     return true;
 }
