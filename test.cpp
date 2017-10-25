@@ -369,15 +369,28 @@ void test_rows_are_different(){
     
     int board[MAX_SIZE][MAX_SIZE];
     
-    string test_board[] = {"XO---X",
-                           "-----O",
-                           "------",
-                           "------",
-                            "------",
-                            "-----X"};
+    string test_board[] = {"----O-",
+                           "X-OX--",
+                           "--OO--",
+                           "X----O",
+                            "-O----",
+                            "--X--X"};
     int size = 6;
     read_board_from_string(board, test_board, size);
-    cout << rows_are_different(board, size, 2, 3) << endl;
+    
+    for(int row1 = 0; row1 < size; row1++){
+        for(int row2 = 0; row2 < size; row2++){
+            cout << "row " << row1 << " and row " << row2 << " are ";
+            if(rows_are_different(board, size, row1, row2)){
+                cout << "different" << endl;;
+            }
+            else if (!rows_are_different(board, size, row1, row2)){
+                cout << "the same" << endl;;
+            }
+            
+        }
+    }
+    
     
     cout << endl;
     
