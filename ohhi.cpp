@@ -92,6 +92,7 @@ bool rows_are_different(const int board[MAX_SIZE][MAX_SIZE],
     if(row1 == row2){
         return false;
     }
+    
     for(int col = 0; col < size; col++){
         if(board[row1][col] != board[row2][col]){
             return true;
