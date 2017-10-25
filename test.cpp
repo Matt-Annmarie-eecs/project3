@@ -24,6 +24,8 @@ void test_col_has_no_threes_of_color();
 
 void test_board_has_no_threes();
 
+void test_solve_three_row();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -197,3 +199,26 @@ void test_duplicates(){
     
     cout << endl;
 }
+
+void test_solve_three_row(){
+    
+    int board[MAX_SIZE][MAX_SIZE];
+    
+    string test_board[] = {"OOOX",
+                           "OXXO",
+                           "O-OX",
+                           "XXOX"};
+    int size = 4;
+    read_board_from_string(board, test_board, size);
+    cout << "initial board:" << endl;
+    print_board(board, size);
+    solve_three_in_a_row(board, size , 2, true);
+    cout << endl;
+    print_board(board, size);
+    
+    
+    
+    cout << endl;
+    
+}
+
