@@ -251,7 +251,31 @@ void solve_balance_column(int board[MAX_SIZE][MAX_SIZE],
                           int size,
                           int col,
                           bool announce) {
-    // your code here
+    int numRed = 0;
+    int numBlue = 0;
+    for (int i = 0; i < size; i++){
+        if (board[i][col] == RED){
+            numRed++;
+        }
+        if (board[i][col] == BLUE){
+            numBlue++;
+        }
+    }
+    
+    if (numRed == (size / 2)){
+        for (int i = 0; i < size; i++){
+            if (board[i][col] == UNKNOWN){
+                mark_square_as(board, size, i, col, BLUE, announce);
+            }
+        }
+    }
+    if (numBlue == (size / 2)){
+        for (int i = 0; i < size; i++){
+            if (board[i][col] == UNKNOWN){
+                mark_square_as(board, size, i, col, RED, announce);
+            }
+        }
+    }
 }
 
 
