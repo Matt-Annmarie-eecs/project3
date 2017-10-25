@@ -370,7 +370,29 @@ bool board_is_solved(const int board[MAX_SIZE][MAX_SIZE], int size) {
 
 bool check_valid_input(int size, int row_input, char col_input,
                        char color_char, int &row, int &col) {
-    // your code here
+    bool validRow = false;
+    if (row_input <= size && row_input <= size){
+        validRow = true;
+    }
+    
+    bool validCol = false;
+    col_input = toupper(col_input);
+    if ((col_input >= 'A') && (col_input <= ('A' + size - 1))){
+        validCol = true;
+    }
+    
+    bool validColor = false;
+    color_char = toupper(color_char);
+    if ((color_char == RED_LETTER) || (color_char == BLUE_LETTER) || (color_char == UNKNOWN_LETTER)){
+        validColor = true;
+    }
+    
+    if (validRow && validCol && validColor){
+        row = row_input - 1;
+        col = col_input - 'A';
+        return true;
+    }
+    cout << "Sorry, that's not a valid input." << endl;
     return false;
 }
 
