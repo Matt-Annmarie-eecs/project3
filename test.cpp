@@ -8,6 +8,9 @@
  * Matthew Waldeck
  * mwaldeck
  *
+ * Ann-Marie Zheng
+ * annzheng
+ *
  * code for project 3 of eecs183 which is a game of ohh1
  */
 
@@ -24,11 +27,13 @@ void test_col_has_no_threes_of_color();
 
 void test_board_has_no_threes();
 
-
 void test_solve_three_row();
 
 void test_solve_balance_row();
 
+void test_solve_three_row();
+
+void test_solve_balance_row();
 
 void test_solve_balance_column();
 
@@ -207,7 +212,6 @@ void test_duplicates(){
     cout << endl;
 }
 
-
 void test_solve_three_row(){
     
     int board[MAX_SIZE][MAX_SIZE];
@@ -245,7 +249,6 @@ void test_solve_three_row(){
     cout << endl;
     
 }
-
 
 void test_solve_balance_row(){
     int board[MAX_SIZE][MAX_SIZE];
@@ -359,19 +362,6 @@ void test_solve_three_col(){
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
