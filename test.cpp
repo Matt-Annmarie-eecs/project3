@@ -207,10 +207,6 @@ void test_duplicates(){
     cout << endl;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 11f9eca17bab2cccc796a368858c40c18d23e146
 void test_solve_three_row(){
     
     int board[MAX_SIZE][MAX_SIZE];
