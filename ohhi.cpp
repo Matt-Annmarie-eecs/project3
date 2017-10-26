@@ -488,22 +488,29 @@ bool check_valid_move(const int original_board[MAX_SIZE][MAX_SIZE],
                       int size, int row, int col, int color) {
     
     //hypothetical board that tests whether a move is valid
-    int hypo_board[size][size];
-        for(int i = 0; i < size * size; i++){
-        hypo_board[0][i] = current_board[0][i];
-    }
-    if (original_board[row][col] != current_board[row][col]){
-        hypo_board[row][col] = color;
-        
-            
-        }
-        
+    int hypo_board[MAX_SIZE][MAX_SIZE];
+    copy_board(current_board, hypo_board, size);
     
+    /*overarching conditional structure checks whether
+     *the selected point was an original point
+     *
+     *nested conditional structure tests whether
+     *the move is valid
+     */
+    if (original_board[row][col] != current_board[row][col]){
+        mark_square_as(hypo_board, size, row, col, color, false);
+        if(board_is_valid(hypo_board, size)){
+            return true;
+        }
+        else {
+            cout << "Sorry, that move violates a rule." << endl;
+        }
+            
+    }
+
     else{
         cout << "Sorry, original squares cannot be changed." << endl;
     }
-    
-    
     return false;
 }
 
