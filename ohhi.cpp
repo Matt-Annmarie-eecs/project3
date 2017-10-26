@@ -495,7 +495,24 @@ bool check_valid_input(int size, int row_input, char col_input,
 bool check_valid_move(const int original_board[MAX_SIZE][MAX_SIZE],
                       const int current_board[MAX_SIZE][MAX_SIZE],
                       int size, int row, int col, int color) {
-    // your code here
+    
+    //hypothetical board that tests whether a move is valid
+    int hypo_board[size][size];
+        for(int i = 0; i < size * size; i++){
+        hypo_board[0][i] = current_board[0][i];
+    }
+    if (original_board[row][col] != current_board[row][col]){
+        hypo_board[row][col] = color;
+        
+            
+        }
+        
+    
+    else{
+        cout << "Sorry, original squares cannot be changed." << endl;
+    }
+    
+    
     return false;
 }
 
