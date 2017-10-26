@@ -41,6 +41,8 @@ void test_solve_three_col();
 
 void test_rows_are_different();
 
+void test_check_valid_input();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -51,7 +53,7 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    test_rows_are_different();
+    test_check_valid_input();
     // add calls to test functions here
 
     return 0;
@@ -396,6 +398,36 @@ void test_rows_are_different(){
     
 }
 
+void test_check_valid_input(){
+    int row = 0;
+    int col = 0;
+    
+    check_valid_input(4, 2, 'a', 'x', row, col);
+    cout << row << col << endl;
+    
+    check_valid_input(4, 4, 'd', '-', row, col);
+    cout << row << col << endl;
+    
+    check_valid_input(8, 1, 'A', 'o', row, col);
+    cout << row << col << endl;
+    
+    check_valid_input(4, 5, 'a', 'x', row, col);
+    
+    check_valid_input(4, 1, 'e', 'x', row, col);
+    
+    check_valid_input(4, 1, 'V', 'x', row, col);
+    
+    check_valid_input(4, 1, 'a', 'y', row, col);
+    
+    check_valid_input(4, 0, 'a', 'x', row, col);
+    cout << row << col << endl;
+    
+    
+
+    
+    
+
+}
 
 
 
