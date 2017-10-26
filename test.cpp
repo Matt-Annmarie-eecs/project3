@@ -422,6 +422,9 @@ void test_check_valid_input(){
     check_valid_input(4, 0, 'a', 'x', row, col);
     cout << row << col << endl;
     
+    check_valid_input(2, 1, 'A', 'X', row, col);
+    cout << row << col << endl;
+    
     
 
     

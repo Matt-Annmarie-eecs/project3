@@ -447,17 +447,8 @@ void solve_balance_column(int board[MAX_SIZE][MAX_SIZE],
 ///////////////////////////////////////
 
 bool board_is_solved(const int board[MAX_SIZE][MAX_SIZE], int size) {
-    bool noUnknown = true;
-    for (int i = 0; i < size; i++){
-        for (int j = 0; j < size; j++){
-            if (board[i][j] == UNKNOWN){
-                noUnknown = false;
-            }
-        }
-    }
-    if (noUnknown == true){
-        if (board_has_no_duplicates(board, size) &&
-            board_has_no_threes(board, size) && board_is_balanced(board, size)){
+    if (count_unknown_squares(board, size) == 0){
+        if (board_is_valid(board, size)){
             return true;
         }
     }
@@ -467,7 +458,7 @@ bool board_is_solved(const int board[MAX_SIZE][MAX_SIZE], int size) {
 bool check_valid_input(int size, int row_input, char col_input,
                        char color_char, int &row, int &col) {
     bool validRow = false;
-    if ((row_input <= size) && (row_input >= size)){
+    if ((row_input <= size) && (row_input >= 1)){
         validRow = true;
     }
     
