@@ -157,8 +157,10 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
                           bool announce) {
     
     for(int col = 0; col < size; col++){
-        
-        if(board[row][col] == UNKNOWN){
+        if(size == 2){
+            
+        }
+        else if(board[row][col] == UNKNOWN){
             if (col == 0){
                 if (board[row][col + 1] == BLUE && board[row][col + 2] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
@@ -190,7 +192,7 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
                 }
                 
                 
-                if (board[row][col - 1] == BLUE && board[row][col - 2] == BLUE){
+                else if (board[row][col - 1] == BLUE && board[row][col - 2] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 else if(board[row][col - 1] == RED &&
@@ -225,7 +227,11 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
     
     for(int row = 0; row < size; row++){
         
-        if(board[row][col] == UNKNOWN){
+        if(size == 2){
+            
+        }
+        
+        else if(board[row][col] == UNKNOWN){
             if (row == 0){
                 if (board[row + 1][col] == BLUE && board[row + 2][col] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
@@ -257,7 +263,7 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
                 }
                 
                 
-                if (board[row - 1][col] == BLUE && board[row - 2][col] == BLUE){
+                else if (board[row - 1][col] == BLUE && board[row - 2][col] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 else if(board[row - 1][col] == RED &&
