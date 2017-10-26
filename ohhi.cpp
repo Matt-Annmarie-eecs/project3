@@ -10,7 +10,8 @@
  * mwaldeck, annzheng
  *
  *
- * project three for eecs 183 which consists of a function implementations for a game of ohh1
+ * project three for eecs 183 which consists of a function implementations for 
+ * a game of ohh1
  */
 
 #include <iostream>
@@ -76,10 +77,12 @@ bool col_has_no_threes_of_color(const int board[MAX_SIZE][MAX_SIZE],
 
 bool board_has_no_threes(const int board[MAX_SIZE][MAX_SIZE], int size) {
     for (int i = 0; i < size; i++){
-        if (!row_has_no_threes_of_color(board, size, i, RED) || !row_has_no_threes_of_color(board, size, i, BLUE)){
+        if (!row_has_no_threes_of_color(board, size, i, RED) ||
+            !row_has_no_threes_of_color(board, size, i, BLUE)){
             return false;
         }
-        if (!col_has_no_threes_of_color(board, size, i, RED) || !col_has_no_threes_of_color(board, size, i, BLUE)){
+        if (!col_has_no_threes_of_color(board, size, i, RED) ||
+            !col_has_no_threes_of_color(board, size, i, BLUE)){
             return false;
         }
     }
@@ -221,7 +224,8 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
                     mark_square_as(board, size, row, col, BLUE, announce);
                 }
                 
-                else if (board[row][col - 1] == BLUE && board[row][col - 2] == BLUE){
+                else if (board[row][col - 1] == BLUE &&
+                         board[row][col - 2] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 
@@ -243,7 +247,8 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
                     mark_square_as(board, size, row, col, BLUE, announce);
                 }
                 
-                else if (board[row][col - 1] == BLUE && board[row][col - 2] == BLUE){
+                else if (board[row][col - 1] == BLUE &&
+                         board[row][col - 2] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 
@@ -342,7 +347,8 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
                 }
                 
                 
-                else if (board[row - 1][col] == BLUE && board[row - 2][col] == BLUE){
+                else if (board[row - 1][col] == BLUE &&
+                         board[row - 2][col] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 else if(board[row - 1][col] == RED &&
@@ -362,7 +368,8 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
                 }
                 
                 
-                else if (board[row - 1][col] == BLUE && board[row - 2][col] == BLUE){
+                else if (board[row - 1][col] == BLUE &&
+                         board[row - 2][col] == BLUE){
                     mark_square_as(board, size, row, col, RED, announce);
                 }
                 else if(board[row - 1][col] == RED &&
@@ -493,7 +500,8 @@ bool check_valid_input(int size, int row_input, char col_input,
     
     bool validColor = false;
     color_char = toupper(color_char);
-    if ((color_char == RED_LETTER) || (color_char == BLUE_LETTER) || (color_char == UNKNOWN_LETTER)){
+    if ((color_char == RED_LETTER) || (color_char == BLUE_LETTER) ||
+        (color_char == UNKNOWN_LETTER)){
         validColor = true;
     }
     
