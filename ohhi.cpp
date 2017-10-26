@@ -380,7 +380,7 @@ bool board_is_solved(const int board[MAX_SIZE][MAX_SIZE], int size) {
 bool check_valid_input(int size, int row_input, char col_input,
                        char color_char, int &row, int &col) {
     bool validRow = false;
-    if (row_input <= size && row_input <= size){
+    if ((row_input <= size) && (row_input >= size)){
         validRow = true;
     }
     
