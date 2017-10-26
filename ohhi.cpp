@@ -180,6 +180,53 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
                 }
 
             }
+            else if (col == 1){
+                
+                if (board[row][col + 1] == BLUE &&
+                    board[row][col - 1] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                
+                else if (board[row][col + 1] == RED &&
+                         board[row][col - 1] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                
+                
+                
+                else if (board[row][col + 1] == BLUE &&
+                         board[row][col + 2] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                else if(board[row][col + 1] == RED &&
+                        board[row][col + 2] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                
+                
+            }
+            else if (col == size - 2){
+                
+                if (board[row][col + 1] == BLUE &&
+                    board[row][col - 1] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                
+                else if (board[row][col + 1] == RED &&
+                         board[row][col - 1] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                
+                
+                else if (board[row][col - 1] == BLUE && board[row][col - 2] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                else if(board[row][col - 1] == RED &&
+                        board[row][col - 2] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                
+            }
             else {
                 if (board[row][col + 1] == BLUE &&
                      board[row][col - 1] == BLUE){
@@ -250,6 +297,46 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
                     mark_square_as(board, size, row, col, BLUE, announce);
                 }
                 
+            }
+            else if (row == 1){
+                
+                if (board[row + 1][col] == BLUE &&
+                    board[row - 1] [col] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                
+                else if (board[row + 1][col] == RED &&
+                         board[row - 1][col] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                else if (board[row + 1][col ] == BLUE &&
+                         board[row + 2][col] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                else if(board[row + 1][col] == RED &&
+                        board[row + 2][col] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+            }
+            else if (row == size - 2){
+                if (board[row + 1][col] == BLUE &&
+                    board[row - 1] [col] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                
+                else if (board[row + 1][col] == RED &&
+                         board[row - 1][col] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
+                
+                
+                else if (board[row - 1][col] == BLUE && board[row - 2][col] == BLUE){
+                    mark_square_as(board, size, row, col, RED, announce);
+                }
+                else if(board[row - 1][col] == RED &&
+                        board[row - 2][col] == RED){
+                    mark_square_as(board, size, row, col, BLUE, announce);
+                }
             }
             else {
                 if (board[row + 1][col] == BLUE &&
