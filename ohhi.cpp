@@ -158,7 +158,7 @@ void solve_three_in_a_row(int board[MAX_SIZE][MAX_SIZE],
     
     for(int col = 0; col < size; col++){
         if(size == 2){
-            
+            break;
         }
         else if(board[row][col] == UNKNOWN){
             if (col == 0){
@@ -228,7 +228,7 @@ void solve_three_in_a_column(int board[MAX_SIZE][MAX_SIZE],
     for(int row = 0; row < size; row++){
         
         if(size == 2){
-            
+            break;
         }
         
         else if(board[row][col] == UNKNOWN){
