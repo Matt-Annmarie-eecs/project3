@@ -5,12 +5,12 @@
  * Project 3: 0h h1
  * Fall 2017
  *
- * <#Name(s)#>
  * Matthew Waldeck, Ann-Marie Zheng
- * <#uniqname(s)#>
+ *
  * mwaldeck, annzheng
  *
- * <#A description of the project here#>
+ *
+ * project three for eecs 183 which consists of a function implementations for a game of ohh1
  */
 
 #include <iostream>
