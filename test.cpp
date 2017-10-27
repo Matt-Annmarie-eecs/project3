@@ -52,8 +52,6 @@ void test_check_valid_move();
  */
 void test_duplicates();
 
-// declare more test functions here
-
 int main() {
      test_duplicates();
     
@@ -91,8 +89,6 @@ int main() {
 
 void test_count_unknown_squares() {
     int board[MAX_SIZE][MAX_SIZE];
-
-    // test case 1
     string test_board_1[] = {"O-OX",
                              "OO--",
                              "X---",
@@ -101,7 +97,6 @@ void test_count_unknown_squares() {
     read_board_from_string(board, test_board_1, size_1);
     cout << count_unknown_squares(board, size_1) << endl;
 
-    // add more tests here
 }
 
 void test_row_has_no_threes_of_color(){
@@ -206,8 +201,6 @@ void test_board_has_no_threes(){
     int size_6 = 4;
     read_board_from_string(board, test_board_6, size_6);
     cout << board_has_no_threes(board, size_6) << endl;
-
-
     
 }
 
