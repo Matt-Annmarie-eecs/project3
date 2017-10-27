@@ -11,13 +11,19 @@
  * Ann-Marie Zheng
  * annzheng
  *
- * code for project 3 of eecs183 which is a game of ohh1
+ * test cases for project 3 of eecs183 which is a game of ohh1
  */
+
 
 #include <iostream>
 #include "utility.h"
 #include "ohhi.h"
 
+/*requires: nothing
+ *modifies: cout
+ *effects: prints various test cases to the console for function
+ *board_has_no_duplicates
+ */
 
 void test_count_unknown_squares();
 
@@ -45,13 +51,14 @@ void test_check_valid_input();
 
 void test_check_valid_move();
 
-/*requires: nothing
- *modifies: cout
- *effects: prints various test cases to the console for function
- *board_has_no_duplicates
- */
+
 void test_duplicates();
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5dedcbe68f37cd2af877ee59fdf991c3314582b4
 int main() {
      test_duplicates();
     
@@ -81,7 +88,7 @@ int main() {
     
      test_check_valid_move();
     
-    // add calls to test functions here
+   
 
     return 0;
 }
@@ -97,6 +104,10 @@ void test_count_unknown_squares() {
     read_board_from_string(board, test_board_1, size_1);
     cout << count_unknown_squares(board, size_1) << endl;
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5dedcbe68f37cd2af877ee59fdf991c3314582b4
 }
 
 void test_row_has_no_threes_of_color(){
