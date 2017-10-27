@@ -546,7 +546,7 @@ bool check_valid_move(const int original_board[MAX_SIZE][MAX_SIZE],
      *nested conditional structure tests whether
      *the move is valid
      */
-    if (original_board[row][col] != current_board[row][col]){
+    if (original_board[row][col] == UNKNOWN){
         mark_square_as(hypo_board, size, row, col, color, false);
         
         if(board_is_valid(hypo_board, size)){
