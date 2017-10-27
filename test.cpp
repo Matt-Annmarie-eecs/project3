@@ -51,7 +51,6 @@ void test_check_valid_input();
 
 void test_check_valid_move();
 
-
 void test_duplicates();
 
 
