@@ -53,8 +53,6 @@ void test_check_valid_move();
 
 void test_duplicates();
 
-
-
 int main() {
      test_duplicates();
     
@@ -92,8 +90,6 @@ int main() {
 
 void test_count_unknown_squares() {
     int board[MAX_SIZE][MAX_SIZE];
-
-    // test case 1
     string test_board_1[] = {"O-OX",
                              "OO--",
                              "X---",
@@ -102,7 +98,6 @@ void test_count_unknown_squares() {
     read_board_from_string(board, test_board_1, size_1);
     cout << count_unknown_squares(board, size_1) << endl;
 
-    
 }
 
 void test_row_has_no_threes_of_color(){
@@ -132,7 +127,6 @@ void test_row_has_no_threes_of_color(){
     int size_3 = 4;
     read_board_from_string(board, test_board_3, size_3);
     cout << row_has_no_threes_of_color(board, size_3, 2, RED) << endl;
-    
     
 }
 
@@ -207,8 +201,6 @@ void test_board_has_no_threes(){
     int size_6 = 4;
     read_board_from_string(board, test_board_6, size_6);
     cout << board_has_no_threes(board, size_6) << endl;
-
-
     
 }
 
@@ -244,6 +236,7 @@ void test_duplicates(){
     cout << board_has_no_duplicates(board3, 4) << " : should be false" << endl;
     
     cout << endl;
+    
 }
 
 void test_solve_three_row(){
@@ -326,6 +319,7 @@ void test_solve_balance_row(){
     solve_balance_row(board, size_4, 3, true);
     print_board(board, size_4);
     cout << endl;
+    
 }
 
 void test_solve_balance_column(){
@@ -374,7 +368,6 @@ void test_solve_balance_column(){
     
 }
 
-
 void test_solve_three_col(){
     
     
@@ -392,8 +385,6 @@ void test_solve_three_col(){
     
     
     cout << endl;
-    
-    
     
 }
 
@@ -454,13 +445,9 @@ void test_check_valid_input(){
     
     check_valid_input(2, 1, 'A', 'X', row, col);
     cout << row << col << endl;
-    
-    
-
-    
-    
 
 }
+
 void test_check_valid_move(){
     
     int board[MAX_SIZE][MAX_SIZE];
@@ -478,8 +465,6 @@ void test_check_valid_move(){
         "-O----",
         "O-X--X"};
     int size = 6;
-    
-    
     
     read_board_from_string(board, test_board, size);
      read_board_from_string(board2, test_board, size);
@@ -501,8 +486,7 @@ void test_check_valid_move(){
     if(!check_valid_move(board, board2, size, 2, 1, BLUE)){
         cout << "2,1 correctly rejected working" << endl;
     }
-   
-    
+
 }
 
 
