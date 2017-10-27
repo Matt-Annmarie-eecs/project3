@@ -43,6 +43,8 @@ void test_rows_are_different();
 
 void test_check_valid_input();
 
+void test_check_valid_move();
+
 /*requires: nothing
  *modifies: cout
  *effects: prints various test cases to the console for function
@@ -53,7 +55,34 @@ void test_duplicates();
 // declare more test functions here
 
 int main() {
-    test_check_valid_input();
+     test_duplicates();
+    
+     test_count_unknown_squares();
+    
+     test_row_has_no_threes_of_color();
+    
+     test_col_has_no_threes_of_color();
+    
+     test_board_has_no_threes();
+    
+     test_solve_three_row();
+    
+     test_solve_balance_row();
+    
+     test_solve_three_row();
+    
+     test_solve_balance_row();
+    
+     test_solve_balance_column();
+    
+     test_solve_three_col();
+    
+     test_rows_are_different();
+    
+     test_check_valid_input();
+    
+     test_check_valid_move();
+    
     // add calls to test functions here
 
     return 0;
@@ -430,6 +459,49 @@ void test_check_valid_input(){
     
     
 
+}
+void test_check_valid_move(){
+    
+    int board[MAX_SIZE][MAX_SIZE];
+    int board2[MAX_SIZE][MAX_SIZE];
+    string test_board[] = {"----O-",
+        "X-OX--",
+        "--OO--",
+        "X----O",
+        "-O----",
+        "--X--X"};
+    string test_board2[] = {"----O-",
+        "X-OX-X",
+        "--OO--",
+        "X--X-O",
+        "-O----",
+        "O-X--X"};
+    int size = 6;
+    
+    
+    
+    read_board_from_string(board, test_board, size);
+     read_board_from_string(board2, test_board, size);
+    cout << endl;
+    if(check_valid_move(board, board2, size, 0, 1, BLUE)){
+        cout << "0,1 is working" << endl;
+    }
+    
+    if(check_valid_move(board, board2, size, 5, 0, BLUE)){
+        cout << "5,0 is working" << endl;
+    }
+    
+    if(!check_valid_move(board, board2, size, 4, 1, BLUE)){
+        cout << "4,1 correctly rejected working" << endl;
+    }
+    if(!check_valid_move(board, board2, size, 1, 0, BLUE)){
+        cout << "1,0 correctly rejected working" << endl;
+    }
+    if(!check_valid_move(board, board2, size, 2, 1, BLUE)){
+        cout << "2,1 correctly rejected working" << endl;
+    }
+   
+    
 }
 
 
